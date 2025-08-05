@@ -1,0 +1,57 @@
+# PASSO A PASSO PARA INICIALIZAR O PROJETO EM UM NOVO PC
+
+1. CLONAR O REPOSITÓRIO
+------------------------
+git clone https://github.com/HeuerBcH/flask-cicd-ecs-pipeline-project.git
+cd flask-cicd-ecs-pipeline-project
+
+2. VERIFICAR/INSTALAR DEPENDÊNCIAS
+-----------------------------------
+- Docker Desktop instalado e rodando com WSL2 (verificar com: `docker --version` e `docker run hello-world`)
+- Python 3.x instalado no WSL (verificar com: `python3 --version`)
+- pip instalado (verificar com: `pip3 --version`)
+- Git instalado (verificar com: `git --version`)
+- AWS CLI instalado (verificar com: `aws --version`)
+- Terraform instalado (opcional) (verificar com: `terraform -version`)
+
+3. CONFIGURAR AWS CLI (caso ainda não esteja configurado)
+-----------------------------------------------------------
+aws configure
+# Insira suas credenciais:
+# AWS Access Key ID
+# AWS Secret Access Key
+# Região (ex: us-east-1)
+# Formato de saída (ex: json)
+
+4. CONFIGURAR GIT
+------------------
+git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"
+
+5. CRIAR AMBIENTE VIRTUAL
+--------------------------
+python3 -m venv venv
+source venv/bin/activate
+
+6. INSTALAR DEPENDÊNCIAS DO PROJETO
+------------------------------------
+pip install -r requirements.txt
+
+7. INICIAR APLICAÇÃO FLASK (caso exista app.py ou similar)
+------------------------------------------------------------
+python app.py
+
+8. EXECUTAR DOCKER (se houver docker-compose)
+----------------------------------------------
+docker compose up
+
+9. ABRIR NO VS CODE (se desejar)
+---------------------------------
+code .
+
+10. INSTALAR EXTENSÕES DO VS CODE (uma vez)
+--------------------------------------------
+- Python
+- Docker
+- GitHub Actions
+- AWS Toolkit (opcional)
