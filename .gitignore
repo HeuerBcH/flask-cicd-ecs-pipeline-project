@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-log.txt
+
+# Virtualenv
+venv/
+ENV/
+env/
+.venv/
+.python-version
+
+# Flask
+instance/
+*.db
+*.sqlite3
+
+# dotenv
+.env
+.env.*
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+terraform.tfvars
+override.tf
+override.tf.json
+.terraform.lock.hcl
+
+# VS Code
+.vscode/
+
+# macOS/Linux
+.DS_Store
+Thumbs.db
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# AWS credentials (se houver)
+*.pem
