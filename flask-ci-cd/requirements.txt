@@ -1,2 +1,20 @@
-flask
-pytest
+# Flask e extensões principais
+flask==2.3.3
+flask-sqlalchemy==3.1.1
+flask-mail==0.9.1
+
+# Conexão com MySQL
+mysqlclient==2.2.0  # precisa de libmysqlclient-dev no Linux (WSL)
+
+# Carregamento de variáveis de ambiente
+python-dotenv==1.0.1
+
+# Testes
+pytest==8.1.1
+pytest-cov==5.0.0
+
+# Outras utilidades
+email-validator==2.1.1 
+
+# Usado no deploy Docker
+gunicorn==22.0.0
