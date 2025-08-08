@@ -1,0 +1,86 @@
+:root {
+    --color-primary: #6C63FF;       
+    --color-secondary: #F8F9FD;     
+    --color-accent: #FFB347;        
+    --color-success: #5FD068;       
+    --color-danger: #FF6B6B;       
+    --color-text-primary: #2B2D42;  
+    --color-text-secondary: #8D99AE;
+}
+
+/* Reset básico */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--color-primary);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.sidebar a {
+    color: white;
+    padding: 10px 0;
+    transition: background 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+/* Conteúdo */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Botões */
+.btn {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: #5950d9;
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+}
+
+.btn-success {
+    background-color: var(--color-success);
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+}
