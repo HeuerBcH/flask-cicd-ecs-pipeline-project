@@ -52,5 +52,12 @@ Thumbs.db
 .cache/
 .pytest_cache/
 
-# AWS credentials (se houver)
+# AWS credentials
 *.pem
+
+.idea/
+
+*.sql
+*.dump
+
+
