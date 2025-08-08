@@ -1,6 +1,12 @@
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 db = SQLAlchemy()
+
+tarefa_responsaveis = db.Table('tarefa_responsaveis',
+    db.Column('usuario_id', db.Integer, db.ForeignKey('usuarios.id'), primary_key=True),
+    db.Column('tarefa_id', db.Integer, db.ForeignKey('tarefas.id'), primary_key=True)
+)
 
 class Usuario(db.Model):
     __tablename__ = 'usuarios'
@@ -8,7 +14,7 @@ class Usuario(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(45), nullable=False, unique=True)
     password = db.Column(db.String(255), nullable=False)
-    email = db.Columnn(db.String(120), nullable=False, unique=True)
+    email = db.Column(db.String(120), nullable=False, unique=True)
     empresa = db.Column(db.String(45), nullable=True)
     criado_em = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
